@@ -10,7 +10,7 @@ namespace ESTEVES_CPE301_DSAL
 {
     internal class EmployeeConnect
     {
-        //declaration of variables for database connections and query which to access from one form to another
+        //
         public String emp_connectionString = null;
         public SqlConnection emp_sql_connection;
         public SqlCommand emp_sql_command;
