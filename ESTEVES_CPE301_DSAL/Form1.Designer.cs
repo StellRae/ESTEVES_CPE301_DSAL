@@ -78,6 +78,7 @@
             this.HEADING.Size = new System.Drawing.Size(968, 39);
             this.HEADING.TabIndex = 0;
             this.HEADING.Text = "Create Employee";
+            this.HEADING.TextChanged += new System.EventHandler(this.HEADING_TextChanged);
             // 
             // empid_txtbox
             // 
@@ -85,6 +86,7 @@
             this.empid_txtbox.Name = "empid_txtbox";
             this.empid_txtbox.Size = new System.Drawing.Size(189, 20);
             this.empid_txtbox.TabIndex = 1;
+            this.empid_txtbox.TextChanged += new System.EventHandler(this.empid_txtbox_TextChanged);
             // 
             // first_txtbox
             // 
@@ -94,6 +96,7 @@
             this.first_txtbox.TabIndex = 2;
             this.first_txtbox.Text = "Firstname";
             this.first_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.first_txtbox.TextChanged += new System.EventHandler(this.first_txtbox_TextChanged);
             // 
             // middle_txtbox
             // 
@@ -103,6 +106,7 @@
             this.middle_txtbox.TabIndex = 3;
             this.middle_txtbox.Text = "Middlename";
             this.middle_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.middle_txtbox.TextChanged += new System.EventHandler(this.middle_txtbox_TextChanged);
             // 
             // surname_txtbox
             // 
@@ -112,6 +116,7 @@
             this.surname_txtbox.TabIndex = 4;
             this.surname_txtbox.Text = "Surname";
             this.surname_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.surname_txtbox.TextChanged += new System.EventHandler(this.surname_txtbox_TextChanged);
             // 
             // suffix_txtbox
             // 
@@ -121,6 +126,7 @@
             this.suffix_txtbox.TabIndex = 5;
             this.suffix_txtbox.Text = "Suffix";
             this.suffix_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.suffix_txtbox.TextChanged += new System.EventHandler(this.suffix_txtbox_TextChanged);
             // 
             // label1
             // 
@@ -131,6 +137,7 @@
             this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Employee Id";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -141,6 +148,7 @@
             this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Employee Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -151,6 +159,7 @@
             this.label3.Size = new System.Drawing.Size(62, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "Salutation";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // salu_combo
             // 
@@ -179,6 +188,7 @@
             this.house_txtbox.TabIndex = 11;
             this.house_txtbox.Text = "House No./Street/Subdivision";
             this.house_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.house_txtbox.TextChanged += new System.EventHandler(this.house_txtbox_TextChanged);
             // 
             // label4
             // 
@@ -189,6 +199,7 @@
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 12;
             this.label4.Text = "Address";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // barangay_txtbox
             // 
@@ -198,6 +209,7 @@
             this.barangay_txtbox.TabIndex = 13;
             this.barangay_txtbox.Text = "Barangay";
             this.barangay_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.barangay_txtbox.TextChanged += new System.EventHandler(this.barangay_txtbox_TextChanged);
             // 
             // city_txtbox
             // 
@@ -207,6 +219,7 @@
             this.city_txtbox.TabIndex = 14;
             this.city_txtbox.Text = "City/Municipality";
             this.city_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.city_txtbox.TextChanged += new System.EventHandler(this.city_txtbox_TextChanged);
             // 
             // province_txtbox
             // 
@@ -216,6 +229,7 @@
             this.province_txtbox.TabIndex = 15;
             this.province_txtbox.Text = "Province/Region";
             this.province_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.province_txtbox.TextChanged += new System.EventHandler(this.province_txtbox_TextChanged);
             // 
             // zip_txtbox
             // 
@@ -225,6 +239,7 @@
             this.zip_txtbox.TabIndex = 16;
             this.zip_txtbox.Text = "Zip";
             this.zip_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.zip_txtbox.TextChanged += new System.EventHandler(this.zip_txtbox_TextChanged);
             // 
             // label5
             // 
@@ -235,6 +250,7 @@
             this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "Birthday";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // birth_txtbox
             // 
@@ -243,6 +259,7 @@
             this.birth_txtbox.Size = new System.Drawing.Size(614, 20);
             this.birth_txtbox.TabIndex = 18;
             this.birth_txtbox.Text = "mm/dd/yy";
+            this.birth_txtbox.TextChanged += new System.EventHandler(this.birth_txtbox_TextChanged);
             // 
             // label6
             // 
@@ -253,6 +270,7 @@
             this.label6.Size = new System.Drawing.Size(64, 15);
             this.label6.TabIndex = 19;
             this.label6.Text = "Nationality";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -263,6 +281,7 @@
             this.label7.Size = new System.Drawing.Size(71, 15);
             this.label7.TabIndex = 20;
             this.label7.Text = "Contact Info";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -273,6 +292,7 @@
             this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 21;
             this.label8.Text = "Job Title";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -283,6 +303,7 @@
             this.label9.Size = new System.Drawing.Size(72, 15);
             this.label9.TabIndex = 22;
             this.label9.Text = "Department";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -293,6 +314,7 @@
             this.label10.Size = new System.Drawing.Size(41, 15);
             this.label10.TabIndex = 23;
             this.label10.Text = "Status";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // nation_txtbox
             // 
@@ -300,6 +322,7 @@
             this.nation_txtbox.Name = "nation_txtbox";
             this.nation_txtbox.Size = new System.Drawing.Size(614, 20);
             this.nation_txtbox.TabIndex = 24;
+            this.nation_txtbox.TextChanged += new System.EventHandler(this.nation_txtbox_TextChanged);
             // 
             // email_txtbox
             // 
@@ -308,6 +331,7 @@
             this.email_txtbox.Size = new System.Drawing.Size(301, 20);
             this.email_txtbox.TabIndex = 25;
             this.email_txtbox.Text = "Email Address";
+            this.email_txtbox.TextChanged += new System.EventHandler(this.email_txtbox_TextChanged);
             // 
             // job_combo
             // 
@@ -316,6 +340,7 @@
             this.job_combo.Name = "job_combo";
             this.job_combo.Size = new System.Drawing.Size(614, 21);
             this.job_combo.TabIndex = 27;
+            this.job_combo.SelectedIndexChanged += new System.EventHandler(this.job_combo_SelectedIndexChanged);
             // 
             // dep_combo
             // 
@@ -324,6 +349,7 @@
             this.dep_combo.Name = "dep_combo";
             this.dep_combo.Size = new System.Drawing.Size(614, 21);
             this.dep_combo.TabIndex = 28;
+            this.dep_combo.SelectedIndexChanged += new System.EventHandler(this.dep_combo_SelectedIndexChanged);
             // 
             // stat_combo
             // 
@@ -332,6 +358,7 @@
             this.stat_combo.Name = "stat_combo";
             this.stat_combo.Size = new System.Drawing.Size(614, 21);
             this.stat_combo.TabIndex = 29;
+            this.stat_combo.SelectedIndexChanged += new System.EventHandler(this.stat_combo_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -362,6 +389,7 @@
             this.tele_txtbox.Size = new System.Drawing.Size(307, 20);
             this.tele_txtbox.TabIndex = 26;
             this.tele_txtbox.Text = "Telephone/Mobile No.";
+            this.tele_txtbox.TextChanged += new System.EventHandler(this.tele_txtbox_TextChanged);
             // 
             // picpath_txtbox
             // 

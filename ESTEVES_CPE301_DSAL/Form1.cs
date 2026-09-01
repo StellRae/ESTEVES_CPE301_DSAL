@@ -19,6 +19,7 @@ namespace ESTEVES_CPE301_DSAL
         private Image pic;
         public Form1()
         {
+            empdb_connect.emp_connString();
             InitializeComponent();
 
         }
@@ -35,13 +36,12 @@ namespace ESTEVES_CPE301_DSAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             try
             {
                 empdb_connect.emp_sql =
                     "INSERT INTO CreateEmployee " +
-                    "(Salutation, FirstName, MiddleName, Surname, Suffix, HouseNo, Birthday, Nationality, EmailAddress, Telephone, JobTitle, Department, Status, Picture) " +
-                    "VALUES ('" + salu_combo.Text + "', '" + first_txtbox.Text + "', '" + middle_txtbox.Text + "', '" + surname_txtbox.Text + "', '" + suffix_txtbox.Text + "', '" + house_txtbox.Text + "', '" + birth_txtbox.Text + "', '" + nation_txtbox.Text + "', '" + email_txtbox.Text + "', '" + tele_txtbox.Text + "', '" + job_combo.Text + "', '" + dep_combo.Text + "', '" + stat_combo.Text + "', '" + dep_combo.Text + "')";
+                    "(EmployeeID, Salutation, FirstName, MiddleName, Surname, Suffix, HouseNo, Birthday, Nationality, EmailAddress, Telephone, JobTitle, Department, Stat, Picture) " +
+                    "VALUES ('" + empid_txtbox.Text + "','" + salu_combo.Text + "', '" + first_txtbox.Text + "', '" + middle_txtbox.Text + "', '" + surname_txtbox.Text + "', '" + suffix_txtbox.Text + "', '" + house_txtbox.Text + "', '" + birth_txtbox.Text + "', '" + nation_txtbox.Text + "', '" + email_txtbox.Text + "', '" + tele_txtbox.Text + "', '" + job_combo.Text + "', '" + dep_combo.Text + "', '" + stat_combo.Text + "', '" + dep_combo.Text + "')";
 
 
                 empdb_connect.emp_connString();
@@ -53,7 +53,7 @@ namespace ESTEVES_CPE301_DSAL
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }   
+            }
         }
 
         private void picpath_txtbox_TextChanged(object sender, EventArgs e)
@@ -86,6 +86,146 @@ namespace ESTEVES_CPE301_DSAL
             stat_combo.Items.Add("Married");
             stat_combo.Items.Add("Single");
             picpath_txtbox.Visible = false;
+
+        }
+
+        private void stat_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dep_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void job_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tele_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void email_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nation_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void birth_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zip_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void province_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void city_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barangay_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void house_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suffix_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void surname_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void middle_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void first_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empid_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HEADING_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
