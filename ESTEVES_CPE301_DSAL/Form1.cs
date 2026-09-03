@@ -40,8 +40,8 @@ namespace ESTEVES_CPE301_DSAL
             {
                 empdb_connect.emp_sql =
                     "INSERT INTO CreateEmployee " +
-                    "(EmployeeID, Salutation, FirstName, MiddleName, Surname, Suffix, HouseNo, Birthday, Nationality, EmailAddress, Telephone, JobTitle, Department, Stat, Picture) " +
-                    "VALUES ('" + empid_txtbox.Text + "','" + salu_combo.Text + "', '" + first_txtbox.Text + "', '" + middle_txtbox.Text + "', '" + surname_txtbox.Text + "', '" + suffix_txtbox.Text + "', '" + house_txtbox.Text + "', '" + birth_txtbox.Text + "', '" + nation_txtbox.Text + "', '" + email_txtbox.Text + "', '" + tele_txtbox.Text + "', '" + job_combo.Text + "', '" + dep_combo.Text + "', '" + stat_combo.Text + "', '" + dep_combo.Text + "')";
+                    "(empid, salu, first_n, middle, surname, suffix, house, barangay, city, province, zip, birth, nation, email, tele, job, dep, stat, picpath) " +
+                    "VALUES ('" + empid_txtbox.Text + "','" + salu_combo.Text + "', '" + first_txtbox.Text + "', '" + middle_txtbox.Text + "', '" + surname_txtbox.Text + "', '" + suffix_txtbox.Text + "', '" + house_txtbox.Text + "', '" + barangay_txtbox.Text + "', '" + city_txtbox.Text + "', '" + province_txtbox.Text + "', '" + zip_txtbox.Text + "','" + birth_txtbox.Text + "', '" + nation_txtbox.Text + "', '" + email_txtbox.Text + "', '" + tele_txtbox.Text + "', '" + job_combo.Text + "', '" + dep_combo.Text + "', '" + stat_combo.Text + "', '"  + picpath_txtbox.Text + "')";
 
 
                 empdb_connect.emp_connString();

@@ -63,21 +63,25 @@
             this.HEADING = new System.Windows.Forms.TextBox();
             this.Update = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.infobtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // picpath_txtbox
             // 
-            this.picpath_txtbox.Location = new System.Drawing.Point(769, 400);
+            this.picpath_txtbox.Location = new System.Drawing.Point(802, 158);
             this.picpath_txtbox.Name = "picpath_txtbox";
-            this.picpath_txtbox.Size = new System.Drawing.Size(199, 20);
+            this.picpath_txtbox.Size = new System.Drawing.Size(116, 20);
             this.picpath_txtbox.TabIndex = 65;
             this.picpath_txtbox.TextChanged += new System.EventHandler(this.picpath_txtbox_TextChanged);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(802, 343);
+            this.button2.Location = new System.Drawing.Point(802, 382);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 39);
             this.button2.TabIndex = 64;
@@ -368,7 +372,8 @@
             this.HEADING.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HEADING.Size = new System.Drawing.Size(968, 39);
             this.HEADING.TabIndex = 33;
-            this.HEADING.Text = "Create Employee";
+            this.HEADING.Text = "Update Employee";
+            this.HEADING.TextChanged += new System.EventHandler(this.HEADING_TextChanged);
             // 
             // Update
             // 
@@ -385,11 +390,44 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // delbtn
+            // 
+            this.delbtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.delbtn.Location = new System.Drawing.Point(802, 337);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(128, 39);
+            this.delbtn.TabIndex = 67;
+            this.delbtn.Text = "Delete";
+            this.delbtn.UseVisualStyleBackColor = false;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
+            // 
+            // infobtn
+            // 
+            this.infobtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.infobtn.Location = new System.Drawing.Point(802, 436);
+            this.infobtn.Name = "infobtn";
+            this.infobtn.Size = new System.Drawing.Size(128, 39);
+            this.infobtn.TabIndex = 68;
+            this.infobtn.Text = "Show Info";
+            this.infobtn.UseVisualStyleBackColor = false;
+            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 436);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(796, 115);
+            this.dataGridView1.TabIndex = 69;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 452);
+            this.ClientSize = new System.Drawing.Size(997, 564);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.infobtn);
+            this.Controls.Add(this.delbtn);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.picpath_txtbox);
             this.Controls.Add(this.button2);
@@ -428,6 +466,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,5 +509,8 @@
         public System.Windows.Forms.TextBox HEADING;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button delbtn;
+        private System.Windows.Forms.Button infobtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
