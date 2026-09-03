@@ -19,6 +19,7 @@ namespace ESTEVES_CPE301_DSAL
         EmployeeConnect empdb_connect = new EmployeeConnect();
         private String picpath;
         private Image pic;
+        public string picname;
       
             
 
@@ -51,18 +52,18 @@ namespace ESTEVES_CPE301_DSAL
 
         private void Update_Click(object sender, EventArgs e)
         {
-                          
-            empdb_connect.emp_sql = "UPDATE CreateEmployee SET salu='" + salu_combo.Text + "', first_n='" + first_txtbox.Text + "', middle='" + middle_txtbox.Text + "', surname='" + surname_txtbox.Text + "', suffix='" + suffix_txtbox.Text + "', house='" + house_txtbox.Text + "', barangay='" + barangay_txtbox.Text + "', city='" + city_txtbox.Text + "', province='" + province_txtbox.Text + "', zip= " + zip_txtbox.Text + "', birth='" + birth_txtbox.Text + "', nation='" + nation_txtbox.Text + "', email='" + email_txtbox.Text + "', tele='" + tele_txtbox.Text + "', job='" + job_combo.Text + "', dep='" + dep_combo.Text + "', Stat='" + stat_combo.Text + "', picpath='" + picpath_txtbox.Text + "' stat='" + stat_combo.Text + "' EmployeeID='" + empid_txtbox.Text + "'";
-            
+            parent.Refresh();
+            empdb_connect.emp_sql = "UPDATE CreateEmployee SET salu='" + salu_combo.Text + "', first_n='" + first_txtbox.Text + "', middle='" + middle_txtbox.Text + "', surname='" + surname_txtbox.Text + "', suffix='" + suffix_txtbox.Text + "', house='" + house_txtbox.Text + "', barangay='" + barangay_txtbox.Text + "', city='" + city_txtbox.Text + "', province='" + province_txtbox.Text + "', zip='" + zip_txtbox.Text + "', birth='" + birth_txtbox.Text + "', nation='" + nation_txtbox.Text + "', email='" + email_txtbox.Text + "', tele='" + tele_txtbox.Text + "', job='" + job_combo.Text + "', dep='" + dep_combo.Text + "', Stat='" + stat_combo.Text + "', picpath='" + picpath_txtbox.Text + "' WHERE empid='" + empid_txtbox.Text + "'";
+
             empdb_connect.emp_connString();
             empdb_connect.emp_cmd();
             empdb_connect.emp_sqladapterUpdate();
 
-
+          
 
             MessageBox.Show("Updated Successfully!");
 
-            parent.Refresh();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -115,7 +116,10 @@ namespace ESTEVES_CPE301_DSAL
             dep_combo.Text = row["dep"].ToString();
             stat_combo.Text = row["stat"].ToString();
             picpath_txtbox.Text = row["picpath"].ToString();
+            picname = picpath_txtbox.Text;
 
+           
+            pictureBox1.Image = Image.FromFile(picname);
 
 
 
@@ -131,8 +135,7 @@ namespace ESTEVES_CPE301_DSAL
             stat_combo.Items.Add("Married");
             stat_combo.Items.Add("Single");
             picpath_txtbox.Visible = false;
-            // dataGridView1.
-           // dataGridView1.Hide();
+            dataGridView1.Hide();
 
         }
 
@@ -142,7 +145,8 @@ namespace ESTEVES_CPE301_DSAL
             openFileDialog1.ShowDialog();
             pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             picpath = openFileDialog1.FileName;
-            pictureBox1.Text = picpath;
+            pictureBox1.Text = picpath; 
+            picpath_txtbox.Text = picpath;
         }
 
         private void picpath_txtbox_TextChanged(object sender, EventArgs e)
@@ -152,7 +156,7 @@ namespace ESTEVES_CPE301_DSAL
 
         private void delbtn_Click(object sender, EventArgs e)
         {
-            empdb_connect.emp_sql = "DELETE FROM EmployeeCreate WHERE EmployeeID = " + empid_txtbox.Text + "";
+            empdb_connect.emp_sql = "DELETE FROM EmployeeCreate WHERE empid = " + empid_txtbox.Text + "";
             empdb_connect.emp_cmd();
             empdb_connect.emp_sqladapterUpdate();
 

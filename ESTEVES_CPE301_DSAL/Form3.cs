@@ -66,13 +66,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
             {
                 Form2 form2 = new Form2(this, e.ColumnIndex);
 
-               
-                form2.Show();
-                form2.Activate();
                 form2.loadDoata(Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value));
-                form2.Function();
+                form2.Function();   
+                form2.Show();
+         
 
-                
+
             }
         }
 
