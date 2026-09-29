@@ -47,23 +47,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmployeeConnect.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="seq_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="seq_2.Designer.cs">
+      <DependentUpon>seq_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Lab_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Lab_1.Designer.cs">
+      <DependentUpon>Lab_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Lab_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Lab_2.Designer.cs">
+      <DependentUpon>Lab_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_3.Designer.cs">
+      <DependentUpon>Lab_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seq_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seq_1.Designer.cs">
+      <DependentUpon>seq_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seq_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seq_3.Designer.cs">
+      <DependentUpon>seq_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seq_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seq_5.Designer.cs">
+      <DependentUpon>seq_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seq_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seq_6.Designer.cs">
+      <DependentUpon>seq_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seq_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seq_7.Designer.cs">
+      <DependentUpon>seq_7.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,14 +125,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_1.resx">
+      <DependentUpon>Lab_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_2.resx">
+      <DependentUpon>Lab_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_3.resx">
+      <DependentUpon>Lab_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_1.resx">
+      <DependentUpon>seq_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_2.resx">
+      <DependentUpon>seq_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_3.resx">
+      <DependentUpon>seq_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_5.resx">
+      <DependentUpon>seq_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_6.resx">
+      <DependentUpon>seq_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seq_7.resx">
+      <DependentUpon>seq_7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

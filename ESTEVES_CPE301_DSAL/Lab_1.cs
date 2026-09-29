@@ -12,12 +12,12 @@ using System.Xml.Linq;
 
 namespace ESTEVES_CPE301_DSAL
 {
-    public partial class Form1 : Form
+    public partial class Lab_1 : Form
     {
         EmployeeConnect empdb_connect = new EmployeeConnect();
         private String picpath;
         private Image pic;
-        public Form1()
+        public Lab_1()
         {
             empdb_connect.emp_connString();
             InitializeComponent();

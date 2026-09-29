@@ -1,6 +1,6 @@
 ﻿namespace ESTEVES_CPE301_DSAL
 {
-    partial class Form3
+    partial class Lab_3
     {
         /// <summary>
         /// Required designer variable.

@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ESTEVES_CPE301_DSAL
 {
-    public partial class Form2 : Form
+    public partial class Lab_2 : Form
     {
         EmployeeConnect empdb_connect = new EmployeeConnect();
         private String picpath;
@@ -23,10 +23,10 @@ namespace ESTEVES_CPE301_DSAL
       
             
 
-        Form3 parent = null;
+        Lab_3 parent = null;
         int index;
         
-        public Form2(Form3 _parent, int _index)
+        public Lab_2(Lab_3 _parent, int _index)
         {
             empdb_connect.emp_connString();
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace ESTEVES_CPE301_DSAL
             index = _index;
         }
 
-        public Form2()
+        public Lab_2()
         {
             empdb_connect.emp_connString();
             InitializeComponent();
@@ -165,7 +165,7 @@ namespace ESTEVES_CPE301_DSAL
 
         private void infobtn_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Lab_3 form3 = new Lab_3();
             form3.ShowDialog();
             form3.Activate();
 

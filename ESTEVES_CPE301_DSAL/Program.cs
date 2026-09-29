@@ -18,7 +18,7 @@ namespace ESTEVES_CPE201_ESTEVES
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // instantiate the Form1 class from the Activity_Midterm1 namespace
-            Application.Run(new Form3());
+            Application.Run(new seq_5());
         }
     }
 }
