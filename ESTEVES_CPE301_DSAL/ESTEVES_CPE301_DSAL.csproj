@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmployeeConnect.cs" />
+    <Compile Include="Lab4_SELECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab4_SELECT.Designer.cs">
+      <DependentUpon>Lab4_SELECT.cs</DependentUpon>
+    </Compile>
     <Compile Include="seq_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Lab4_SELECT.resx">
+      <DependentUpon>Lab4_SELECT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab_1.resx">
       <DependentUpon>Lab_1.cs</DependentUpon>
     </EmbeddedResource>
