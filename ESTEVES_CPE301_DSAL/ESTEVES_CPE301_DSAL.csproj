@@ -53,6 +53,12 @@
     <Compile Include="Lab4_SELECT.Designer.cs">
       <DependentUpon>Lab4_SELECT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab_5Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_5Search.Designer.cs">
+      <DependentUpon>Lab_5Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="seq_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab_3.resx">
       <DependentUpon>Lab_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_5Search.resx">
+      <DependentUpon>Lab_5Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="seq_1.resx">
       <DependentUpon>seq_1.cs</DependentUpon>

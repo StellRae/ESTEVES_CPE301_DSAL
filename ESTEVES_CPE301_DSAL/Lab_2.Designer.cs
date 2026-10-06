@@ -420,12 +420,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(796, 115);
             this.dataGridView1.TabIndex = 69;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Form2
+            // Lab_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 564);
+            this.ClientSize = new System.Drawing.Size(982, 564);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.infobtn);
             this.Controls.Add(this.delbtn);
@@ -463,7 +464,7 @@
             this.Controls.Add(this.first_txtbox);
             this.Controls.Add(this.empid_txtbox);
             this.Controls.Add(this.HEADING);
-            this.Name = "Form2";
+            this.Name = "Lab_2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

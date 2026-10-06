@@ -20,8 +20,10 @@ namespace ESTEVES_CPE301_DSAL
         private String picpath;
         private Image pic;
         public string picname;
-      
-            
+        public string SelectedEmpId { get; set; }
+
+
+
 
         Lab_3 parent = null;
         int index;
@@ -136,6 +138,39 @@ namespace ESTEVES_CPE301_DSAL
             stat_combo.Items.Add("Single");
             picpath_txtbox.Visible = false;
             dataGridView1.Hide();
+            if (!string.IsNullOrEmpty(SelectedEmpId))
+            {
+                empdb_connect.emp_sql = "SELECT * FROM CreateEmployee WHERE empid = '" + SelectedEmpId + "'";
+                empdb_connect.emp_cmd();
+                empdb_connect.emp_sqladapterSelect();
+                empdb_connect.emp_sqldatasetSELECT();
+                dataGridView1.DataSource = empdb_connect.emp_sql_dataset.Tables[0];
+            }
+
+
+            if (empdb_connect.emp_sql_dataset.Tables[0].Rows.Count > 0)
+            {
+                // Assigning values back to textboxes and pictureboxes
+                empid_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][0].ToString();
+                salu_combo.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][1].ToString();
+                first_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][2].ToString();
+                middle_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][3].ToString();
+                surname_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][4].ToString();
+                suffix_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][5].ToString();
+                house_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][6].ToString();
+                barangay_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][7].ToString();
+                city_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][8].ToString();
+                province_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][9].ToString();
+                zip_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][10].ToString();
+                birth_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][11].ToString();
+                nation_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][12].ToString();
+                email_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][13].ToString();
+                tele_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][14].ToString();
+                job_combo.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][15].ToString();
+                dep_combo.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][16].ToString();
+                stat_combo.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][17].ToString();
+                picpath_txtbox.Text = empdb_connect.emp_sql_dataset.Tables[0].Rows[0][18].ToString();
+            }
 
         }
 
@@ -156,7 +191,7 @@ namespace ESTEVES_CPE301_DSAL
 
         private void delbtn_Click(object sender, EventArgs e)
         {
-            empdb_connect.emp_sql = "DELETE FROM EmployeeCreate WHERE empid = " + empid_txtbox.Text + "";
+            empdb_connect.emp_sql = "DELETE FROM CreateEmployee WHERE empid = " + empid_txtbox.Text + "";
             empdb_connect.emp_cmd();
             empdb_connect.emp_sqladapterUpdate();
 
@@ -172,6 +207,11 @@ namespace ESTEVES_CPE301_DSAL
         }
 
         private void HEADING_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

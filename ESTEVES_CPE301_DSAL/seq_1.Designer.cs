@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 629);
+            this.ClientSize = new System.Drawing.Size(1032, 629);
             this.Controls.Add(this.search_txtbox);
             this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.dataGridView1);

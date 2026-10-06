@@ -22,7 +22,7 @@ namespace ESTEVES_CPE301_DSAL
         {
             //
             emp_sql_connection = new SqlConnection();
-            emp_connectionString = "Data Source = C203-24; Initial Catalog = CompanySystem; user id = SA; password = B1Admin123@";
+            emp_connectionString = "Data Source = C203-12; Initial Catalog = CompanySystem; user id = SA; password = B1Admin123@";
             emp_sql_connection = new SqlConnection(emp_connectionString);
             emp_sql_connection.ConnectionString = emp_connectionString;
             emp_sql_connection.Open();
@@ -80,7 +80,12 @@ namespace ESTEVES_CPE301_DSAL
             emp_sql_dataset = new DataSet();
             emp_sql_dataadapter.Fill(emp_sql_dataset, "CompanySystem");
         }
+        public void emp_select()
+        {
+            emp_sql =
+                "SELECT * FROM CreateEmployee ";
+                
+        }
 
-      
     }
 }
