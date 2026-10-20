@@ -59,6 +59,18 @@
     <Compile Include="Lab_5Search.Designer.cs">
       <DependentUpon>Lab_5Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_6.Designer.cs">
+      <DependentUpon>Lab_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practical_Quiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practical_Quiz.Designer.cs">
+      <DependentUpon>Practical_Quiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="seq_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab_5Search.resx">
       <DependentUpon>Lab_5Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_6.resx">
+      <DependentUpon>Lab_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practical_Quiz.resx">
+      <DependentUpon>Practical_Quiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="seq_1.resx">
       <DependentUpon>seq_1.cs</DependentUpon>
