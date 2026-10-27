@@ -59,7 +59,12 @@ namespace ESTEVES_CPE301_DSAL
         {
             try
             {
-                empdb_connect.emp_sql =
+
+                limit_max = Convert.ToInt32(maxtxtbox.Text);
+
+                if (limit_min < limit_max)
+                {
+                    empdb_connect.emp_sql =
                     "INSERT INTO quizTbl " +
                     "(empcode, comp, dep, cut, empname, payperiod, basicpay, overtime, absences, honor, tardy, gross, totaldeduc, netpay) " +
                     "VALUES ('" + empcodetxtbox.Text + "','" + comptxtbox.Text + "', '" + deptxtbox.Text + "', '" + cutofftxtbox.Text + "', '" + nametxtbox.Text + "', '" + periodtxtbox.Text + "', '" + basictxtbox.Text + "', '" + overtxtbox.Text + "', '" + abstxtbox.Text + "', '" + honortxtbox.Text + "', '" + tardytxtbox.Text + "','" + grosstxtbox.Text + "', '" + deductxtbox.Text + "', '" + nettxtbox.Text + "')";
@@ -70,7 +75,17 @@ namespace ESTEVES_CPE301_DSAL
                 empdb_connect.emp_sqladapterInsert();
 
                 MessageBox.Show("Employee saved successfully!");
+
+                limit_min++;
+                currenttxtbox.Text = Convert.ToString(limit_min);
             }
+
+
+            else
+            {
+                MessageBox.Show("Input Limit Reached!");
+            }
+        }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
@@ -79,97 +94,119 @@ namespace ESTEVES_CPE301_DSAL
 
         private void Practical_Quiz_Load(object sender, EventArgs e)
         {
+            honortxtbox.Text = "1000";
             basictxtbox.Enabled = false;
             overtxtbox.Enabled = false;
             abstxtbox.Enabled = false;
             tardytxtbox.Enabled = false;
             grosstxtbox.Enabled = false;
-            deductxtbox.Enabled =false;
+            deductxtbox.Enabled = false;
             nettxtbox.Enabled = false;
-
+            hdmftxtbox.Text = "100";
+            hdmftxtbox.Enabled = false;
 
         }
 
         private void compbtn_Click(object sender, EventArgs e)
         {
 
-        
+            try
+            {
+                limit_max = Convert.ToInt32(maxtxtbox.Text);
+
+            if (limit_min < limit_max)
+            {
 
 
-                    basic_rate = Convert.ToDouble(basic_ratetxtbox.Text);
-                    basic_hour = Convert.ToDouble(basic_hourtxtbox.Text);
-                    basic = basic_rate * basic_hour;
+                basic_rate = Convert.ToDouble(basic_ratetxtbox.Text);
+                basic_hour = Convert.ToDouble(basic_hourtxtbox.Text);
+                basic = basic_rate * basic_hour;
 
 
-                    over_hour = Convert.ToDouble(overtime.Text);
-                    over_rate = Convert.ToDouble(basic_ratetxtbox.Text);
-                    over = over_rate * over_hour;
-
-
-
-                    abs_hour = Convert.ToDouble(abs_txtbox.Text);
-                    abs_rate = Convert.ToDouble(basic_ratetxtbox.Text);
-                    abs = abs_rate * abs_hour;
+                over_hour = Convert.ToDouble(overtime.Text);
+                over_rate = Convert.ToDouble(basic_ratetxtbox.Text);
+                over = over_rate * over_hour;
 
 
 
-                    honor = Convert.ToDouble(honortxtbox.Text);
+                abs_hour = Convert.ToDouble(abs_txtbox.Text);
+                abs_rate = Convert.ToDouble(basic_ratetxtbox.Text);
+                abs = abs_rate * abs_hour;
 
-                    tardy_hour = Convert.ToDouble(tardy_txtbox.Text);
-                    tardy_rate = Convert.ToDouble(basic_ratetxtbox.Text);
-                    tardy = tardy_rate * tardy_hour;
 
-                    //
-                    gross = basic + over + honor;
 
-                    if (gross > 0 && gross <= 20000)
-                    {
-                        sss_contrib = 125.75;
-                    }
-                    else if (gross > 20001 && gross <= 50000)
-                    {
-                        sss_contrib = 2200.50;
-                    }
-                    else if (gross > 50001 && gross <= 75000)
-                    {
-                        sss_contrib = 4800;
-                    }
-                    else
-                    {
-                        sss_contrib = 5800;
-                    }
+                honor = Convert.ToDouble(honortxtbox.Text);
 
-                    if (gross > 0 && gross <= 20000)
-                    {
-                        phil_contrib = 125.75;
-                    }
-                    else if (gross > 20001 && gross <= 50000)
-                    {
-                        phil_contrib = 2200.50;
-                    }
-                    else if (gross > 50001 && gross <= 75000)
-                    {
-                        phil_contrib = 4800;
-                    }
-                    else
-                    {
-                        phil_contrib = 5800;
-                    }
+                tardy_hour = Convert.ToDouble(tardy_txtbox.Text);
+                tardy_rate = Convert.ToDouble(basic_ratetxtbox.Text);
+                tardy = tardy_rate * tardy_hour;
 
-                    deductions = abs + tardy + sss_contrib + phil_contrib + hdmf_contrib;
+                //
+                gross = basic + over + honor;
 
-                    netpay = gross - deductions;
-                    //
-                    deductxtbox.Text = deductions.ToString("C");
-                    basictxtbox.Text = basic.ToString("C");
-                    overtxtbox.Text = over.ToString("C");
-                    abstxtbox.Text = abs.ToString("C");
-                    tardytxtbox.Text = tardy.ToString("C");
-                    grosstxtbox.Text = gross.ToString("C");
-                    nettxtbox.Text = netpay.ToString("C");
+                if (gross > 0 && gross <= 20000)
+                {
+                    sss_contrib = 125.75;
                 }
-      
+                else if (gross > 20001 && gross <= 50000)
+                {
+                    sss_contrib = 2200.50;
+                }
+                else if (gross > 50001 && gross <= 75000)
+                {
+                    sss_contrib = 4800;
+                }
+                else
+                {
+                    sss_contrib = 5800;
+                }
 
+                if (gross > 0 && gross <= 20000)
+                {
+                    phil_contrib = 125.75;
+                }
+                else if (gross > 20001 && gross <= 50000)
+                {
+                    phil_contrib = 2200.50;
+                }
+                else if (gross > 50001 && gross <= 75000)
+                {
+                    phil_contrib = 4800;
+                }
+                else
+                {
+                    phil_contrib = 5800;
+                }
+
+                deductions = abs + tardy + sss_contrib + phil_contrib + hdmf_contrib;
+
+                netpay = gross - deductions;
+                //
+                deductxtbox.Text = deductions.ToString("C");
+                basictxtbox.Text = basic.ToString("C");
+                overtxtbox.Text = over.ToString("C");
+                abstxtbox.Text = abs.ToString("C");
+                tardytxtbox.Text = tardy.ToString("C");
+                grosstxtbox.Text = gross.ToString("C");
+                nettxtbox.Text = netpay.ToString("C");
+
+
+                limit_min++;
+                currenttxtbox.Text = Convert.ToString(limit_min);
+            }
+
+
+            else
+            {
+                MessageBox.Show("Input Limit Reached!");
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Input Error");
+            }
+
+}
 
 
 
@@ -185,6 +222,14 @@ namespace ESTEVES_CPE301_DSAL
         private void inputtxtbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cutofftxtbox_Leave(object sender, EventArgs e)
+        {
+                
+            string date;
+            date = cutofftxtbox.Text;
+            periodtxtbox.Text = Convert.ToString(date);
         }
     }
 }
