@@ -22,7 +22,7 @@ namespace ESTEVES_CPE301_DSAL
         {
             //
             emp_sql_connection = new SqlConnection();
-            emp_connectionString = "Data Source = C203-12; Initial Catalog = MidtermDb; user id = SA; password = B1Admin123@";
+            emp_connectionString = "Data Source = C203-12; Initial Catalog = WaterBillDB; user id = SA; password = B1Admin123@";
             emp_sql_connection = new SqlConnection(emp_connectionString);
             emp_sql_connection.ConnectionString = emp_connectionString;
             emp_sql_connection.Open();

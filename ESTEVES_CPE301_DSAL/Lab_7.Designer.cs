@@ -74,19 +74,19 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tboxa = new System.Windows.Forms.TextBox();
+            this.tboxb = new System.Windows.Forms.TextBox();
+            this.tboxd = new System.Windows.Forms.TextBox();
+            this.tboxc = new System.Windows.Forms.TextBox();
+            this.tboxf = new System.Windows.Forms.TextBox();
+            this.tboxe = new System.Windows.Forms.TextBox();
             this.cons_txtbox = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.readdate_txtbox = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.tboxg = new System.Windows.Forms.TextBox();
+            this.tboxh = new System.Windows.Forms.TextBox();
+            this.tboxi = new System.Windows.Forms.TextBox();
             this.totalbeforetax_txtbox = new System.Windows.Forms.TextBox();
             this.main_txtbox = new System.Windows.Forms.TextBox();
             this.envi_txtbox = new System.Windows.Forms.TextBox();
@@ -110,6 +110,8 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.soatxtbox = new System.Windows.Forms.TextBox();
+            this.monthtxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -204,9 +206,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(31, 201);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 13);
+            this.label9.Size = new System.Drawing.Size(39, 13);
             this.label9.TabIndex = 10;
-            this.label9.Text = "SOA # 00000000003456789012";
+            this.label9.Text = "SOA #";
             // 
             // label10
             // 
@@ -224,9 +226,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(156, 234);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(234, 20);
+            this.label11.Size = new System.Drawing.Size(131, 20);
             this.label11.TabIndex = 12;
-            this.label11.Text = "For the Month of February 2024";
+            this.label11.Text = "For the Month of ";
             // 
             // label12
             // 
@@ -532,48 +534,48 @@
             this.label44.TabIndex = 69;
             this.label44.Text = "TO";
             // 
-            // textBox1
+            // tboxa
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(141, 295);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(397, 20);
-            this.textBox1.TabIndex = 70;
+            this.tboxa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxa.Location = new System.Drawing.Point(141, 295);
+            this.tboxa.Name = "tboxa";
+            this.tboxa.Size = new System.Drawing.Size(397, 20);
+            this.tboxa.TabIndex = 70;
             // 
-            // textBox2
+            // tboxb
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 319);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(397, 20);
-            this.textBox2.TabIndex = 71;
+            this.tboxb.Location = new System.Drawing.Point(141, 319);
+            this.tboxb.Name = "tboxb";
+            this.tboxb.Size = new System.Drawing.Size(397, 20);
+            this.tboxb.TabIndex = 71;
             // 
-            // textBox3
+            // tboxd
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 368);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(397, 20);
-            this.textBox3.TabIndex = 73;
+            this.tboxd.Location = new System.Drawing.Point(141, 368);
+            this.tboxd.Name = "tboxd";
+            this.tboxd.Size = new System.Drawing.Size(397, 20);
+            this.tboxd.TabIndex = 73;
             // 
-            // textBox4
+            // tboxc
             // 
-            this.textBox4.Location = new System.Drawing.Point(141, 345);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(397, 20);
-            this.textBox4.TabIndex = 72;
+            this.tboxc.Location = new System.Drawing.Point(141, 345);
+            this.tboxc.Name = "tboxc";
+            this.tboxc.Size = new System.Drawing.Size(397, 20);
+            this.tboxc.TabIndex = 72;
             // 
-            // textBox5
+            // tboxf
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 419);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(397, 20);
-            this.textBox5.TabIndex = 75;
+            this.tboxf.Location = new System.Drawing.Point(141, 419);
+            this.tboxf.Name = "tboxf";
+            this.tboxf.Size = new System.Drawing.Size(397, 20);
+            this.tboxf.TabIndex = 75;
             // 
-            // textBox6
+            // tboxe
             // 
-            this.textBox6.Location = new System.Drawing.Point(141, 394);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(397, 20);
-            this.textBox6.TabIndex = 74;
+            this.tboxe.Location = new System.Drawing.Point(141, 394);
+            this.tboxe.Name = "tboxe";
+            this.tboxe.Size = new System.Drawing.Size(397, 20);
+            this.tboxe.TabIndex = 74;
             // 
             // cons_txtbox
             // 
@@ -604,26 +606,26 @@
             this.readdate_txtbox.TabIndex = 76;
             this.readdate_txtbox.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
-            // textBox11
+            // tboxg
             // 
-            this.textBox11.Location = new System.Drawing.Point(543, 81);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(141, 20);
-            this.textBox11.TabIndex = 80;
+            this.tboxg.Location = new System.Drawing.Point(543, 81);
+            this.tboxg.Name = "tboxg";
+            this.tboxg.Size = new System.Drawing.Size(141, 20);
+            this.tboxg.TabIndex = 80;
             // 
-            // textBox12
+            // tboxh
             // 
-            this.textBox12.Location = new System.Drawing.Point(722, 81);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(141, 20);
-            this.textBox12.TabIndex = 81;
+            this.tboxh.Location = new System.Drawing.Point(722, 81);
+            this.tboxh.Name = "tboxh";
+            this.tboxh.Size = new System.Drawing.Size(141, 20);
+            this.tboxh.TabIndex = 81;
             // 
-            // textBox13
+            // tboxi
             // 
-            this.textBox13.Location = new System.Drawing.Point(902, 81);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(141, 20);
-            this.textBox13.TabIndex = 82;
+            this.tboxi.Location = new System.Drawing.Point(908, 88);
+            this.tboxi.Name = "tboxi";
+            this.tboxi.Size = new System.Drawing.Size(141, 20);
+            this.tboxi.TabIndex = 82;
             // 
             // totalbeforetax_txtbox
             // 
@@ -666,6 +668,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(141, 20);
             this.textBox19.TabIndex = 88;
+            this.textBox19.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             // 
             // billout_txtbox
             // 
@@ -734,10 +737,11 @@
             this.button2.TabIndex = 101;
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 940);
+            this.button1.Location = new System.Drawing.Point(25, 940);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 46);
             this.button1.TabIndex = 100;
@@ -818,12 +822,30 @@
     "--------------------------------------------------------------------------------" +
     "--------------";
             // 
+            // soatxtbox
+            // 
+            this.soatxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soatxtbox.Location = new System.Drawing.Point(76, 196);
+            this.soatxtbox.Name = "soatxtbox";
+            this.soatxtbox.Size = new System.Drawing.Size(199, 20);
+            this.soatxtbox.TabIndex = 113;
+            // 
+            // monthtxtbox
+            // 
+            this.monthtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthtxtbox.Location = new System.Drawing.Point(282, 234);
+            this.monthtxtbox.Name = "monthtxtbox";
+            this.monthtxtbox.Size = new System.Drawing.Size(199, 20);
+            this.monthtxtbox.TabIndex = 114;
+            // 
             // Lab_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1090, 1061);
+            this.Controls.Add(this.monthtxtbox);
+            this.Controls.Add(this.soatxtbox);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label47);
@@ -846,19 +868,19 @@
             this.Controls.Add(this.envi_txtbox);
             this.Controls.Add(this.basic_txtbox);
             this.Controls.Add(this.current_txtbox);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.tboxi);
+            this.Controls.Add(this.tboxh);
+            this.Controls.Add(this.tboxg);
             this.Controls.Add(this.cons_txtbox);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.readdate_txtbox);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tboxf);
+            this.Controls.Add(this.tboxe);
+            this.Controls.Add(this.tboxd);
+            this.Controls.Add(this.tboxc);
+            this.Controls.Add(this.tboxb);
+            this.Controls.Add(this.tboxa);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label42);
             this.Controls.Add(this.label43);
@@ -905,8 +927,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "Lab_7";
-            this.Text = "Description: WB Water Bill, GD-Guarantee Deposit, MISC-Reopening Fee, Connection " +
-    "Fee, Metering Charge";
+            this.Text = "toatl";
             this.Load += new System.EventHandler(this.Lab_7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -962,19 +983,19 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tboxa;
+        private System.Windows.Forms.TextBox tboxb;
+        private System.Windows.Forms.TextBox tboxd;
+        private System.Windows.Forms.TextBox tboxc;
+        private System.Windows.Forms.TextBox tboxf;
+        private System.Windows.Forms.TextBox tboxe;
         private System.Windows.Forms.TextBox cons_txtbox;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox readdate_txtbox;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox tboxg;
+        private System.Windows.Forms.TextBox tboxh;
+        private System.Windows.Forms.TextBox tboxi;
         private System.Windows.Forms.TextBox totalbeforetax_txtbox;
         private System.Windows.Forms.TextBox main_txtbox;
         private System.Windows.Forms.TextBox envi_txtbox;
@@ -998,5 +1019,7 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox soatxtbox;
+        private System.Windows.Forms.TextBox monthtxtbox;
     }
 }

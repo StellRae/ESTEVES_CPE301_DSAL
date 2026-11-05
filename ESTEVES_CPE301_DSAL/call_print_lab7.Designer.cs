@@ -77,30 +77,32 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
+            this.present = new System.Windows.Forms.Label();
+            this.previous = new System.Windows.Forms.Label();
+            this.consump = new System.Windows.Forms.Label();
+            this.tin = new System.Windows.Forms.Label();
+            this.service = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.contract = new System.Windows.Forms.Label();
+            this.business = new System.Windows.Forms.Label();
+            this.rate = new System.Windows.Forms.Label();
+            this.meter = new System.Windows.Forms.Label();
+            this.mru = new System.Windows.Forms.Label();
+            this.seq = new System.Windows.Forms.Label();
+            this.totalcurrent = new System.Windows.Forms.Label();
+            this.msc = new System.Windows.Forms.Label();
+            this.environmental = new System.Windows.Forms.Label();
+            this.current = new System.Windows.Forms.Label();
+            this.basic = new System.Windows.Forms.Label();
+            this.input = new System.Windows.Forms.Label();
+            this.output = new System.Windows.Forms.Label();
+            this.governmenttax = new System.Windows.Forms.Label();
+            this.totalamount = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
+            this.paymentdue = new System.Windows.Forms.Label();
+            this.month_txtbox = new System.Windows.Forms.Label();
+            this.soa_txtbox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,9 +198,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(155, 234);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(234, 20);
+            this.label11.Size = new System.Drawing.Size(131, 20);
             this.label11.TabIndex = 124;
-            this.label11.Text = "For the Month of February 2024";
+            this.label11.Text = "For the Month of ";
             // 
             // label10
             // 
@@ -215,9 +217,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(30, 201);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 13);
+            this.label9.Size = new System.Drawing.Size(39, 13);
             this.label9.TabIndex = 122;
-            this.label9.Text = "SOA # 00000000003456789012";
+            this.label9.Text = "SOA #";
             // 
             // label7
             // 
@@ -339,7 +341,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(16, 994);
+            this.label43.Location = new System.Drawing.Point(19, 942);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(161, 16);
             this.label43.TabIndex = 163;
@@ -348,7 +350,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(18, 971);
+            this.label39.Location = new System.Drawing.Point(21, 910);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(97, 13);
             this.label39.TabIndex = 162;
@@ -357,7 +359,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(18, 931);
+            this.label40.Location = new System.Drawing.Point(19, 897);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(176, 13);
             this.label40.TabIndex = 161;
@@ -366,7 +368,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(18, 905);
+            this.label41.Location = new System.Drawing.Point(18, 884);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(180, 13);
             this.label41.TabIndex = 160;
@@ -375,7 +377,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(18, 884);
+            this.label35.Location = new System.Drawing.Point(18, 871);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(226, 13);
             this.label35.TabIndex = 159;
@@ -384,7 +386,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(18, 858);
+            this.label36.Location = new System.Drawing.Point(19, 858);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(73, 13);
             this.label36.TabIndex = 158;
@@ -393,7 +395,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(18, 832);
+            this.label37.Location = new System.Drawing.Point(18, 828);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(83, 13);
             this.label37.TabIndex = 157;
@@ -556,251 +558,272 @@
             this.label19.TabIndex = 140;
             this.label19.Text = "METERING INFORMATION";
             // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Location = new System.Drawing.Point(132, 557);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(28, 13);
+            this.date.TabIndex = 184;
+            this.date.Text = "read";
+            // 
+            // present
+            // 
+            this.present.AutoSize = true;
+            this.present.Location = new System.Drawing.Point(132, 583);
+            this.present.Name = "present";
+            this.present.Size = new System.Drawing.Size(28, 13);
+            this.present.TabIndex = 185;
+            this.present.Text = "read";
+            // 
+            // previous
+            // 
+            this.previous.AutoSize = true;
+            this.previous.Location = new System.Drawing.Point(132, 609);
+            this.previous.Name = "previous";
+            this.previous.Size = new System.Drawing.Size(28, 13);
+            this.previous.TabIndex = 186;
+            this.previous.Text = "read";
+            // 
+            // consump
+            // 
+            this.consump.AutoSize = true;
+            this.consump.Location = new System.Drawing.Point(132, 635);
+            this.consump.Name = "consump";
+            this.consump.Size = new System.Drawing.Size(28, 13);
+            this.consump.TabIndex = 187;
+            this.consump.Text = "read";
+            // 
+            // tin
+            // 
+            this.tin.AutoSize = true;
+            this.tin.Location = new System.Drawing.Point(145, 371);
+            this.tin.Name = "tin";
+            this.tin.Size = new System.Drawing.Size(28, 13);
+            this.tin.TabIndex = 192;
+            this.tin.Text = "read";
+            // 
+            // service
+            // 
+            this.service.AutoSize = true;
+            this.service.Location = new System.Drawing.Point(145, 345);
+            this.service.Name = "service";
+            this.service.Size = new System.Drawing.Size(28, 13);
+            this.service.TabIndex = 191;
+            this.service.Text = "read";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(145, 319);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(28, 13);
+            this.name.TabIndex = 190;
+            this.name.Text = "read";
+            // 
+            // contract
+            // 
+            this.contract.AutoSize = true;
+            this.contract.Location = new System.Drawing.Point(145, 293);
+            this.contract.Name = "contract";
+            this.contract.Size = new System.Drawing.Size(28, 13);
+            this.contract.TabIndex = 189;
+            this.contract.Text = "read";
+            // 
+            // business
+            // 
+            this.business.AutoSize = true;
+            this.business.Location = new System.Drawing.Point(145, 423);
+            this.business.Name = "business";
+            this.business.Size = new System.Drawing.Size(28, 13);
+            this.business.TabIndex = 194;
+            this.business.Text = "read";
+            // 
+            // rate
+            // 
+            this.rate.AutoSize = true;
+            this.rate.Location = new System.Drawing.Point(145, 397);
+            this.rate.Name = "rate";
+            this.rate.Size = new System.Drawing.Size(28, 13);
+            this.rate.TabIndex = 193;
+            this.rate.Text = "read";
+            // 
+            // meter
+            // 
+            this.meter.AutoSize = true;
+            this.meter.Location = new System.Drawing.Point(13, 526);
+            this.meter.Name = "meter";
+            this.meter.Size = new System.Drawing.Size(28, 13);
+            this.meter.TabIndex = 195;
+            this.meter.Text = "read";
+            // 
+            // mru
+            // 
+            this.mru.AutoSize = true;
+            this.mru.Location = new System.Drawing.Point(203, 526);
+            this.mru.Name = "mru";
+            this.mru.Size = new System.Drawing.Size(28, 13);
+            this.mru.TabIndex = 196;
+            this.mru.Text = "read";
+            // 
+            // seq
+            // 
+            this.seq.AutoSize = true;
+            this.seq.Location = new System.Drawing.Point(389, 526);
+            this.seq.Name = "seq";
+            this.seq.Size = new System.Drawing.Size(28, 13);
+            this.seq.TabIndex = 197;
+            this.seq.Text = "read";
+            // 
+            // totalcurrent
+            // 
+            this.totalcurrent.AutoSize = true;
+            this.totalcurrent.Location = new System.Drawing.Point(273, 897);
+            this.totalcurrent.Name = "totalcurrent";
+            this.totalcurrent.Size = new System.Drawing.Size(28, 13);
+            this.totalcurrent.TabIndex = 201;
+            this.totalcurrent.Text = "read";
+            // 
+            // msc
+            // 
+            this.msc.AutoSize = true;
+            this.msc.Location = new System.Drawing.Point(273, 884);
+            this.msc.Name = "msc";
+            this.msc.Size = new System.Drawing.Size(28, 13);
+            this.msc.TabIndex = 200;
+            this.msc.Text = "read";
+            // 
+            // environmental
+            // 
+            this.environmental.AutoSize = true;
+            this.environmental.Location = new System.Drawing.Point(273, 871);
+            this.environmental.Name = "environmental";
+            this.environmental.Size = new System.Drawing.Size(28, 13);
+            this.environmental.TabIndex = 199;
+            this.environmental.Text = "read";
+            // 
+            // current
+            // 
+            this.current.AutoSize = true;
+            this.current.Location = new System.Drawing.Point(142, 828);
+            this.current.Name = "current";
+            this.current.Size = new System.Drawing.Size(28, 13);
+            this.current.TabIndex = 202;
+            this.current.Text = "read";
+            // 
+            // basic
+            // 
+            this.basic.AutoSize = true;
+            this.basic.Location = new System.Drawing.Point(271, 848);
+            this.basic.Name = "basic";
+            this.basic.Size = new System.Drawing.Size(28, 13);
+            this.basic.TabIndex = 203;
+            this.basic.Text = "read";
+            // 
+            // input
+            // 
+            this.input.AutoSize = true;
+            this.input.Location = new System.Drawing.Point(145, 806);
+            this.input.Name = "input";
+            this.input.Size = new System.Drawing.Size(28, 13);
+            this.input.TabIndex = 204;
+            this.input.Text = "read";
+            // 
+            // output
+            // 
+            this.output.AutoSize = true;
+            this.output.Location = new System.Drawing.Point(396, 806);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(28, 13);
+            this.output.TabIndex = 205;
+            this.output.Text = "read";
+            // 
+            // governmenttax
+            // 
+            this.governmenttax.AutoSize = true;
+            this.governmenttax.Location = new System.Drawing.Point(273, 910);
+            this.governmenttax.Name = "governmenttax";
+            this.governmenttax.Size = new System.Drawing.Size(28, 13);
+            this.governmenttax.TabIndex = 206;
+            this.governmenttax.Text = "read";
+            // 
+            // totalamount
+            // 
+            this.totalamount.AutoSize = true;
+            this.totalamount.Location = new System.Drawing.Point(205, 945);
+            this.totalamount.Name = "totalamount";
+            this.totalamount.Size = new System.Drawing.Size(28, 13);
+            this.totalamount.TabIndex = 207;
+            this.totalamount.Text = "read";
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(132, 557);
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(21, 958);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(28, 13);
-            this.label42.TabIndex = 184;
-            this.label42.Text = "read";
+            this.label42.Size = new System.Drawing.Size(161, 16);
+            this.label42.TabIndex = 208;
+            this.label42.Text = "PAYMENT DUE DATE";
             // 
-            // label47
+            // paymentdue
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(132, 583);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(28, 13);
-            this.label47.TabIndex = 185;
-            this.label47.Text = "read";
+            this.paymentdue.AutoSize = true;
+            this.paymentdue.Location = new System.Drawing.Point(205, 960);
+            this.paymentdue.Name = "paymentdue";
+            this.paymentdue.Size = new System.Drawing.Size(28, 13);
+            this.paymentdue.TabIndex = 209;
+            this.paymentdue.Text = "read";
             // 
-            // label50
+            // month_txtbox
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(132, 609);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(28, 13);
-            this.label50.TabIndex = 186;
-            this.label50.Text = "read";
+            this.month_txtbox.AutoSize = true;
+            this.month_txtbox.Location = new System.Drawing.Point(292, 239);
+            this.month_txtbox.Name = "month_txtbox";
+            this.month_txtbox.Size = new System.Drawing.Size(28, 13);
+            this.month_txtbox.TabIndex = 210;
+            this.month_txtbox.Text = "read";
             // 
-            // label51
+            // soa_txtbox
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(132, 635);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(28, 13);
-            this.label51.TabIndex = 187;
-            this.label51.Text = "read";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(184, 657);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(28, 13);
-            this.label52.TabIndex = 188;
-            this.label52.Text = "read";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(145, 371);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(28, 13);
-            this.label53.TabIndex = 192;
-            this.label53.Text = "read";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(145, 345);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(28, 13);
-            this.label54.TabIndex = 191;
-            this.label54.Text = "read";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(145, 319);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(28, 13);
-            this.label55.TabIndex = 190;
-            this.label55.Text = "read";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(145, 293);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(28, 13);
-            this.label56.TabIndex = 189;
-            this.label56.Text = "read";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(145, 423);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(28, 13);
-            this.label57.TabIndex = 194;
-            this.label57.Text = "read";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(145, 397);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(28, 13);
-            this.label58.TabIndex = 193;
-            this.label58.Text = "read";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(13, 526);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(28, 13);
-            this.label59.TabIndex = 195;
-            this.label59.Text = "read";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(203, 526);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(28, 13);
-            this.label60.TabIndex = 196;
-            this.label60.Text = "read";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(389, 526);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(28, 13);
-            this.label61.TabIndex = 197;
-            this.label61.Text = "read";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(273, 936);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(28, 13);
-            this.label62.TabIndex = 201;
-            this.label62.Text = "read";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(273, 910);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(28, 13);
-            this.label63.TabIndex = 200;
-            this.label63.Text = "read";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(273, 884);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(28, 13);
-            this.label64.TabIndex = 199;
-            this.label64.Text = "read";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(273, 858);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(28, 13);
-            this.label65.TabIndex = 198;
-            this.label65.Text = "read";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(142, 832);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(28, 13);
-            this.label66.TabIndex = 202;
-            this.label66.Text = "read";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(142, 858);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(28, 13);
-            this.label67.TabIndex = 203;
-            this.label67.Text = "read";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(145, 806);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(28, 13);
-            this.label68.TabIndex = 204;
-            this.label68.Text = "read";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(396, 806);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(28, 13);
-            this.label69.TabIndex = 205;
-            this.label69.Text = "read";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(203, 971);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(28, 13);
-            this.label70.TabIndex = 206;
-            this.label70.Text = "read";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(203, 997);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(28, 13);
-            this.label71.TabIndex = 207;
-            this.label71.Text = "read";
+            this.soa_txtbox.AutoSize = true;
+            this.soa_txtbox.Location = new System.Drawing.Point(80, 201);
+            this.soa_txtbox.Name = "soa_txtbox";
+            this.soa_txtbox.Size = new System.Drawing.Size(28, 13);
+            this.soa_txtbox.TabIndex = 211;
+            this.soa_txtbox.Text = "read";
             // 
             // call_print_lab7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 1061);
-            this.Controls.Add(this.label71);
-            this.Controls.Add(this.label70);
-            this.Controls.Add(this.label69);
-            this.Controls.Add(this.label68);
-            this.Controls.Add(this.label67);
-            this.Controls.Add(this.label66);
-            this.Controls.Add(this.label62);
-            this.Controls.Add(this.label63);
-            this.Controls.Add(this.label64);
-            this.Controls.Add(this.label65);
-            this.Controls.Add(this.label61);
-            this.Controls.Add(this.label60);
-            this.Controls.Add(this.label59);
-            this.Controls.Add(this.label57);
-            this.Controls.Add(this.label58);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.label54);
-            this.Controls.Add(this.label55);
-            this.Controls.Add(this.label56);
-            this.Controls.Add(this.label52);
-            this.Controls.Add(this.label51);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.label47);
+            this.Controls.Add(this.soa_txtbox);
+            this.Controls.Add(this.month_txtbox);
+            this.Controls.Add(this.paymentdue);
             this.Controls.Add(this.label42);
+            this.Controls.Add(this.totalamount);
+            this.Controls.Add(this.governmenttax);
+            this.Controls.Add(this.output);
+            this.Controls.Add(this.input);
+            this.Controls.Add(this.basic);
+            this.Controls.Add(this.current);
+            this.Controls.Add(this.totalcurrent);
+            this.Controls.Add(this.msc);
+            this.Controls.Add(this.environmental);
+            this.Controls.Add(this.seq);
+            this.Controls.Add(this.mru);
+            this.Controls.Add(this.meter);
+            this.Controls.Add(this.business);
+            this.Controls.Add(this.rate);
+            this.Controls.Add(this.tin);
+            this.Controls.Add(this.service);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.contract);
+            this.Controls.Add(this.consump);
+            this.Controls.Add(this.previous);
+            this.Controls.Add(this.present);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label44);
@@ -908,29 +931,31 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label date;
+        private System.Windows.Forms.Label present;
+        private System.Windows.Forms.Label previous;
+        private System.Windows.Forms.Label consump;
+        private System.Windows.Forms.Label tin;
+        private System.Windows.Forms.Label service;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label contract;
+        private System.Windows.Forms.Label business;
+        private System.Windows.Forms.Label rate;
+        private System.Windows.Forms.Label meter;
+        private System.Windows.Forms.Label mru;
+        private System.Windows.Forms.Label seq;
+        private System.Windows.Forms.Label totalcurrent;
+        private System.Windows.Forms.Label msc;
+        private System.Windows.Forms.Label environmental;
+        private System.Windows.Forms.Label current;
+        private System.Windows.Forms.Label basic;
+        private System.Windows.Forms.Label input;
+        private System.Windows.Forms.Label output;
+        private System.Windows.Forms.Label governmenttax;
+        private System.Windows.Forms.Label totalamount;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label paymentdue;
+        private System.Windows.Forms.Label month_txtbox;
+        private System.Windows.Forms.Label soa_txtbox;
     }
 }
