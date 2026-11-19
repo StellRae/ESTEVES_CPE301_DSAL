@@ -71,14 +71,14 @@ namespace ESTEVES_CPE301_DSAL
         public void emp_sqldatasetSELECT()
         {
             emp_sql_dataset = new DataSet();
-            emp_sql_dataadapter.Fill(emp_sql_dataset, "CompanySystem");
+            emp_sql_dataadapter.Fill(emp_sql_dataset, "WaterBillDB");
         }
 
         //
         public void emp_sqldatasetSELECTSALES()
         {
             emp_sql_dataset = new DataSet();
-            emp_sql_dataadapter.Fill(emp_sql_dataset, "CompanySystem");
+            emp_sql_dataadapter.Fill(emp_sql_dataset, "WaterBillDB");
         }
         public void emp_select()
         {

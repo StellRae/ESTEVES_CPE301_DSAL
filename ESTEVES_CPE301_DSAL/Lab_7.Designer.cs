@@ -112,6 +112,14 @@
             this.label49 = new System.Windows.Forms.Label();
             this.soatxtbox = new System.Windows.Forms.TextBox();
             this.monthtxtbox = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.sortalgo = new System.Windows.Forms.ComboBox();
+            this.sortby = new System.Windows.Forms.ComboBox();
+            this.sortorder = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -719,6 +727,7 @@
             this.button3.TabIndex = 103;
             this.button3.Text = "BUBBLE SORT";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -838,12 +847,84 @@
             this.monthtxtbox.Size = new System.Drawing.Size(199, 20);
             this.monthtxtbox.TabIndex = 114;
             // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(29, 495);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(86, 13);
+            this.label50.TabIndex = 115;
+            this.label50.Text = "Sorting Algorithm";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(185, 495);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(41, 13);
+            this.label51.TabIndex = 116;
+            this.label51.Text = "Sort By";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(29, 546);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(69, 13);
+            this.label52.TabIndex = 117;
+            this.label52.Text = "Sorting Order";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // sortalgo
+            // 
+            this.sortalgo.FormattingEnabled = true;
+            this.sortalgo.Location = new System.Drawing.Point(21, 514);
+            this.sortalgo.Name = "sortalgo";
+            this.sortalgo.Size = new System.Drawing.Size(121, 21);
+            this.sortalgo.TabIndex = 118;
+            // 
+            // sortby
+            // 
+            this.sortby.FormattingEnabled = true;
+            this.sortby.Location = new System.Drawing.Point(173, 514);
+            this.sortby.Name = "sortby";
+            this.sortby.Size = new System.Drawing.Size(121, 21);
+            this.sortby.TabIndex = 119;
+            // 
+            // sortorder
+            // 
+            this.sortorder.FormattingEnabled = true;
+            this.sortorder.Location = new System.Drawing.Point(21, 565);
+            this.sortorder.Name = "sortorder";
+            this.sortorder.Size = new System.Drawing.Size(121, 21);
+            this.sortorder.TabIndex = 120;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(173, 553);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(139, 33);
+            this.button5.TabIndex = 121;
+            this.button5.Text = "Apply Sorting";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Lab_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1090, 1061);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.sortorder);
+            this.Controls.Add(this.sortby);
+            this.Controls.Add(this.sortalgo);
+            this.Controls.Add(this.label52);
+            this.Controls.Add(this.label51);
+            this.Controls.Add(this.label50);
             this.Controls.Add(this.monthtxtbox);
             this.Controls.Add(this.soatxtbox);
             this.Controls.Add(this.label49);
@@ -1021,5 +1102,13 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox soatxtbox;
         private System.Windows.Forms.TextBox monthtxtbox;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.ComboBox sortalgo;
+        private System.Windows.Forms.ComboBox sortby;
+        private System.Windows.Forms.ComboBox sortorder;
+        private System.Windows.Forms.Button button5;
     }
 }
