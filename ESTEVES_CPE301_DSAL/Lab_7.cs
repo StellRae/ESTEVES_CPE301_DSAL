@@ -27,172 +27,187 @@
                 maintenance_service_charge = 1.53,
                 meter = 23.52;
 
-            private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+            object source = dataGridView1.DataSource;
+
+            if (source == null)
             {
-                object source = dataGridView1.DataSource;
-
-                if (source == null)
-                {
-                    MessageBox.Show("No records found.");
-                    return;
-                }
-
-                BindingSource bs = source as BindingSource;
-
-                if (bs == null)
-                {
-                    bs = new BindingSource();
-                    bs.DataSource = source;
-                    dataGridView1.DataSource = bs;
-                }
-
-                IList records = bs.List;
-
-                if (records.Count == 0 ||
-                    records.IsReadOnly ||
-                    records.IsFixedSize)
-                {
-                    MessageBox.Show("DataSource cannot be sorted directly.");
-                    return;
-                }
-
-                string column;
-
-                switch (sortby.Text)
-                {
-                    case "Statement of Account":
-                        column = "SOA";
-                        break;
-
-                    case "Account Name":
-                        column = "named";
-                        break;
-
-                    case "Service Address":
-                        column = "addressed";
-                        break;
-
-                    case "Meter No.":
-                        column = "meterno";
-                        break;
-
-                    case "Read Date":
-                        column = "readdate";
-                        break;
-
-                    case "Consumption":
-                        column = "consump";
-                        break;
-
-                    case "Bill Period Input":
-                        column = "billperiodinput";
-                        break;
-
-                    case "Bill Period Output":
-                        column = "billperiodoutput";
-                        break;
-
-                    case "Total Amount Due":
-                        column = "totalamountdue";
-                        break;
-
-                    default:
-                        MessageBox.Show("Please select a valid sort field.");
-                        return;
-                }
-
-                PropertyDescriptor property =
-                    TypeDescriptor.GetProperties(records[0])
-                    .Find(column, true);
-
-                if (property == null)
-                {
-                    MessageBox.Show("Sorting field not found.");
-                    return;
-                }
-
-                Comparison<object> compare = (a, b) =>
-                {
-                    object x = property.GetValue(a);
-                    object y = property.GetValue(b);
-
-                    if (x == null || x == DBNull.Value)
-                        return y == null || y == DBNull.Value ? 0 : -1;
-
-                    if (y == null || y == DBNull.Value)
-                        return 1;
-
-                    return Comparer.DefaultInvariant.Compare(x, y);
-                };
-
-        
-                List<object> items = new List<object>(records.Count);
-                foreach (object item in records)
-                {
-                    items.Add(item);
-                }
-
-                switch (sortalgo.Text)
-                {
-                    case "Bubble Sort":
-                        BubbleSort(items, compare);
-                        break;
-
-                    case "Selection Sort":
-                        SelectionSort(items, compare);
-                        break;
-
-                    case "Insertion Sort":
-                        InsertionSort(items, compare);
-                        break;
-
-                    case "Merge Sort":
-                        MergeSort(items, 0,
-                            items.Count - 1, compare);
-                        break;
-
-                    case "Quick Sort":
-                        QuickSort(items, 0,
-                            items.Count - 1, compare);
-                        break;
-                }
-
-                if (bs.DataSource is DataTable dt)
-                {
-                    DataTable sortedTable = dt.Clone();
-                    foreach (object item in items)
-                    {
-                        if (item is DataRowView drv)
-                            sortedTable.ImportRow(drv.Row);
-                        else if (item is DataRow dr)
-                            sortedTable.ImportRow(dr);
-                    }
-                    bs.DataSource = sortedTable;
-                    bs.ResetBindings(false);
-                }
-                else
-                {
-                    bool previous = bs.RaiseListChangedEvents;
-                    bs.RaiseListChangedEvents = false;
-
-                    try
-                    {
-                        for (int i = 0; i < items.Count; i++)
-                        {
-                            records[i] = items[i];
-                        }
-                    }
-                    finally
-                    {
-                        bs.RaiseListChangedEvents = previous;
-
-                        if (previous)
-                            bs.ResetBindings(false);
-                    }
-                }
+                MessageBox.Show("No records found.");
+                return;
             }
 
-            private void BubbleSort(
+            BindingSource bs = source as BindingSource;
+
+            if (bs == null)
+            {
+                bs = new BindingSource();
+                bs.DataSource = source;
+                dataGridView1.DataSource = bs;
+            }
+
+            IList records = bs.List;
+
+            if (records.Count == 0 ||
+                records.IsReadOnly ||
+                records.IsFixedSize)
+            {
+                MessageBox.Show("DataSource cannot be sorted directly.");
+                return;
+            }
+
+            string column;
+
+            switch (sortby.Text)
+            {
+                case "Statement of Account":
+                    column = "SOA";
+                    break;
+
+                case "Account Name":
+                    column = "named";
+                    break;
+
+                case "Service Address":
+                    column = "addressed";
+                    break;
+
+                case "Meter No.":
+                    column = "meterno";
+                    break;
+
+                case "Read Date":
+                    column = "readdate";
+                    break;
+
+                case "Consumption":
+                    column = "consump";
+                    break;
+
+                case "Bill Period Input":
+                    column = "billperiodinput";
+                    break;
+
+                case "Bill Period Output":
+                    column = "billperiodoutput";
+                    break;
+
+                case "Total Amount Due":
+                    column = "totalamountdue";
+                    break;
+
+                default:
+                    MessageBox.Show("Please select a valid sort field.");
+                    return;
+            }
+
+            PropertyDescriptor property =
+                TypeDescriptor.GetProperties(records[0])
+                .Find(column, true);
+
+            if (property == null)
+            {
+                MessageBox.Show("Sorting field not found.");
+                return;
+            }
+
+            bool isDescending = string.Equals(
+                sortorder.Text,
+                "Descending",
+                StringComparison.OrdinalIgnoreCase);
+
+            Comparison<object> compare = (a, b) =>
+            {
+                object x = property.GetValue(a);
+                object y = property.GetValue(b);
+
+                bool xNull = x == null || x == DBNull.Value;
+                bool yNull = y == null || y == DBNull.Value;
+
+                if (xNull && yNull)
+                    return 0;
+
+                if (xNull)
+                    return isDescending ? 1 : -1;
+
+                if (yNull)
+                    return isDescending ? -1 : 1;
+
+                int result = Comparer.DefaultInvariant.Compare(x, y);
+                return isDescending ? -result : result;
+            };
+
+            List<object> items = new List<object>(records.Count);
+            foreach (object item in records)
+            {
+                items.Add(item);
+            }
+
+            switch (sortalgo.Text)
+            {
+                case "Bubble Sort":
+                    BubbleSort(items, compare);
+                    break;
+
+                case "Selection Sort":
+                    SelectionSort(items, compare);
+                    break;
+
+                case "Insertion Sort":
+                    InsertionSort(items, compare);
+                    break;
+
+                case "Merge Sort":
+                    MergeSort(items, 0,
+                        items.Count - 1, compare);
+                    break;
+
+                case "Quick Sort":
+                    QuickSort(items, 0,
+                        items.Count - 1, compare);
+                    break;
+
+                default:
+                    MessageBox.Show("Please select a valid sort algorithm.");
+                    return;
+            }
+
+            if (bs.DataSource is DataTable dt)
+            {
+                DataTable sortedTable = dt.Clone();
+                foreach (object item in items)
+                {
+                    if (item is DataRowView drv)
+                        sortedTable.ImportRow(drv.Row);
+                    else if (item is DataRow dr)
+                        sortedTable.ImportRow(dr);
+                }
+                bs.DataSource = sortedTable;
+                bs.ResetBindings(false);
+            }
+            else
+            {
+                bool previous = bs.RaiseListChangedEvents;
+                bs.RaiseListChangedEvents = false;
+
+                try
+                {
+                    for (int i = 0; i < items.Count; i++)
+                    {
+                        records[i] = items[i];
+                    }
+                }
+                finally
+                {
+                    bs.RaiseListChangedEvents = previous;
+
+                    if (previous)
+                        bs.ResetBindings(false);
+                }
+            }
+        }
+
+        private void BubbleSort(
         IList records,
         Comparison<object> compare)
             {
